@@ -1,6 +1,6 @@
 # S3 Executor Plugin User Guide
 
-The S3 (Self Serve Services) Executor Plugin is a Jenkins build trigger plugin that configures S3 jobs into Jenkins automation pipeline. Jenkins admin registers S3 instances with valid tokens in the system configuration. Authenticated users can then configure and execute the jobs that are pre registered on those S3 instances in the automation process as simple build steps. Once a job has been executed, the plugin provides an option to sync the build with the job running on the S3 server by pulling the run state periodically from the S3.
+This is Sedy The S3 (Self Serve Services) Executor Plugin is a Jenkins build trigger plugin that configures S3 jobs into Jenkins automation pipeline. Jenkins admin registers S3 instances with valid tokens in the system configuration. Authenticated users can then configure and execute the jobs that are pre registered on those S3 instances in the automation process as simple build steps. Once a job has been executed, the plugin provides an option to sync the build with the job running on the S3 server by pulling the run state periodically from the S3.
 
 ## Objectives
 
