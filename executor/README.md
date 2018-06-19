@@ -89,7 +89,7 @@ Provide the information about the S3 job to be executed.
 
 * Complete the mandatory information such as: "S3 Instance URL" and the "UserID", "Job name" and "profile".
 * The "Testbed/Topology", and "Maximum Request Lifetime" are optional, if not provided the default values configured in S3 will be used. "Testbed" and "Topology" are mutually exclusive, only one can be selected. The "Max Request Lifetime" is the maximum duration for the Request to get Completed until it is stopped.  
-* Select the "Block until completed" to block running the next build step until the current build step is completed. The status of the current build step is checked periodically (every 5 minutes). The S3 job status URL will be provided on the console. 
+* Select the "Block until completed" to block running the next build step until the current build step is completed. The status of the current build step is checked periodically (every 2 minutes). The S3 job status URL will be provided on the console. 
  
 ![](assets/images/buildconfig3.png)
 
