@@ -1,6 +1,6 @@
 # S3 Executor Plugin User Guide
 
-The S3 (Self Serve Services) Executor Plugin allows calling sanity job(s) registerd in various S3 instances as a build step.
+The S3 (Self Serve Services) Executor Plugin enables calling sanity job(s) registered in various S3 instances as a build step.
 
 ## Objectives
 
@@ -9,9 +9,8 @@ The objective of this doc is to show how to:
 * Install S3 Executor Plugin 
 * Configure S3 Executor plugin  
 * Register and validate S3 instance(s) 
-* Add Execute S3 build step to the pipeline calling jobs in registred S3 instance(s)  
+* Add Execute S3 build step to the pipeline calling jobs in registered S3 instance(s)  
 * Execute and View results 
-* View the execution results
 
 ## Prerequisites
 
@@ -29,7 +28,7 @@ Log in to Jenkins, click on "Manage Jenkins" and choose "Manage Plugins" from th
 ![](assets/images/install1.png)
 
 ### Step 3:
-From the "Manage Plugins" select the "Advanced" tab. In "Upload Plugin" section choose the _.hpi_ file downloaded in step #1, and click on "upload".  Follow through the steps prompted by jenkins to complete the installation.  This restart of jenkin is optional, and not required for this plugin.   
+From the "Manage Plugins" select the "Advanced" tab.  In "Upload Plugin" section choose the _.hpi_ file downloaded in step #1, and click on "upload".  Follow through the steps prompted by Jenkin to complete the installation.  This restart of Jenkins is optional, and not required for this plugin.   
 
 ![](assets/images/install2.png)
 
@@ -66,8 +65,8 @@ Possible validation messages are:
 * User name does not match its token: `Fail to validate S3 instance, username and token is not match.`
 * Server connection issue: `Fail to validate S3 instance with provided information. Connect to xxx failed: Connection refused (Connection refused)`
 * Any other issues from S3:
-  * `fail to validate S3 instance, make sure S3 URL matches user with valid tocken. Unexpected response from S3 - 404: Not Found`
-  * `fail to validate S3 instance, make sure S3 URL matches user with valid tocken. Unexpected response from S3 - 401: Unauthorized`
+  * `fail to validate S3 instance, make sure S3 URL matches user with valid token. Unexpected response from S3 - 404: Not Found`
+  * `fail to validate S3 instance, make sure S3 URL matches user with valid token. Unexpected response from S3 - 401: Unauthorized`
 
 ![](assets/images/sysconfig4.png)
 
@@ -118,11 +117,11 @@ To execute the job, click "Build Now" on the project page.
 
 ![](assets/images/run.png)
 
-Example of output when the "Block untill completed" option disabled: 
+Example of output when the "Block until completed" option disabled: 
 
 ![](assets/images/output1.png)
 
 
-Example of output when the "Block untill completed" option enabled:
+Example of output when the "Block until completed" option enabled:
 
 ![](assets/images/output2.png)
