@@ -1,7 +1,6 @@
 # pyATS Report Plugin User Guide
 
-The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins,  with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) Dashboard.  
-The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts). 
+The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) Dashboard. The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts). 
 
 ## Objectives
 
@@ -22,7 +21,7 @@ The objective of this doc is to show how to:
 ## pyATS Report Plugin Features
 * Extract ResultsDetails.xml results file from a specific archive location(Free Style Project) or from the Jenkins _workspace_ (PyATS Project)
 * Provide Test suite, and testcase result details with Trend graphs
-* Option to upload the results to Cisco S3 and/or Cisco TRADe.
+* Option to upload the results to Cisco S3 and/or Cisco TRADe
 * Pointer to direct view from S3 Dashboard
 
 ## Plugin Installation
@@ -52,7 +51,7 @@ Navigate to project configuration, click on "Add post-build action" and select "
 #### Step 2:
 Based on the the project type (pyATS Project or FreeStyple Project,  the Report plugin interface will have minor differences based on where the _testresults archive_(ResultsDetails.xml) is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
 
-_Free Style project__:
+_Free Style project_:
 
 * Specify the absolute path to the Test result archive file.  The file must be accessible from the build node (master/slave).
 Report Plugin will validate the specified path, in the event of the file not being found/reachable from the current running node (master node), warning message displays. These warning message should be ignored if a _variable_ is used to specify the path, or the build and the archive file are located on remote/slave node.
