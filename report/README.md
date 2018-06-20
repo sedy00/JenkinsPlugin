@@ -1,6 +1,6 @@
 # pyATS Report Plugin User Guide
 
-The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) portal. The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts).
+The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) portal. The Report Plugin is designed to work with pyATS Project (for pyATS based scripts), as well as Jenkins Free Style project(for TCL based scripts).
 
 ## Objectives
 
