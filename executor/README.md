@@ -1,6 +1,6 @@
 # S3 Executor Plugin User Guide
 
-The S3 (Self Serve Services) Executor Plugin enables calling sanity job(s) registered in various S3 instances as a build step.
+The S3 (Self Serve Services) Executor Plugin enables sanity job(s) registered in S3 portal(s) to be called within a build step.
 
 ## Objectives
 
@@ -9,7 +9,7 @@ The objective of this doc is to show how to:
 * Install S3 Executor Plugin 
 * Configure S3 Executor plugin  
 * Register and validate S3 instance(s) 
-* Add Execute S3 build step to the pipeline calling jobs in registered S3 instance(s)  
+* Add Execute S3 build step to the pipeline calling jobs in registered S3 Portal(s)  
 * Execute and View results 
 
 ## Prerequisites
