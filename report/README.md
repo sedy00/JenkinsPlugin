@@ -1,6 +1,6 @@
 # pyATS Report Plugin User Guide
 
-The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) Dashboard. The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts). 
+The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) portal. The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts). 
 
 ## Objectives
 
@@ -9,7 +9,7 @@ The objective of this doc is to show how to:
 * Install the Report plugin  
 * Configure the Report plugin
 * Execute and Test Result Report  
-* View the test result in Self Serve Services(S3) Dashboard
+* View the test result in Self Serve Services(S3) portal
 * View the test result in Trade 
 * Report Plugin XML Specification
 
@@ -21,7 +21,7 @@ The objective of this doc is to show how to:
 ## pyATS Report Plugin Features
 * Extract ResultsDetails.xml results file from a specific archive location(Free Style Project) or from the Jenkins _workspace_ (PyATS Project)
 * Provide Test suite, and testcase result details with Trend graphs
-* Option to upload the results to Cisco S3 and/or Cisco TRADe
+* Option to upload the results to Cisco S3 and/or Cisco Trade
 * Pointer to direct view from S3 Dashboard
 
 ## Plugin Installation
@@ -35,7 +35,7 @@ Log in Jenkins, click "Manage Jenkins" and choose "Manage Plugins" from the list
 ![](assets/images/install1.png)
 
 ### Step 3:
-From the "Manage Plugins" select the "Advanced" tab.  In "Upload Plugin" section choose the _.hpi_ file downloaded in step #1, and click on "upload".  Follow through the steps prompted by jenkins to complete the installation.  This restart of jenkin is optional, and not required for this plugin.   
+From the "Manage Plugins" select the "Advanced" tab.  In "Upload Plugin" section choose the _.hpi_ file downloaded in step #1, and click on "upload".  Follow through the steps prompted by Jenkins to complete the installation.  This restart of Jenkins is optional, and not required for this plugin.   
 
 ![](assets/images/install2.png)
 
@@ -49,7 +49,7 @@ Navigate to project configuration, click on "Add post-build action" and select "
 ![](assets/images/config1.png)
 
 #### Step 2:
-Based on the the project type (pyATS Project or FreeStyple Project) the Report plugin interface will have minor differences depending on where the _test result archive (.zip)_ is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
+Based on the project type (pyATS Project or Free style Project) the Report plugin interface will have minor differences depending on where the _test result archive (.zip)_ is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
 
 _Free Style project_:
 
@@ -80,7 +80,7 @@ To upload the archive to the S3 dashboard specify:
 
 ### S3 Parameter Configuration
 
-Uploading resuls to S3 requires REST API authentication. This is a mandatory parameter to be granted the uploading permission for Jenkins. The Authentication Token Parameters is specified through Jenkins native _Password Parameter_ component. Other optional S3 execution specific Parameters is specified through Jenkins native _String Parameter_ component.  
+Uploading results to S3 requires REST API authentication. This is a mandatory parameter to be granted the uploading permission for Jenkins. The Authentication Token Parameters is specified through Jenkins native _Password Parameter_ component. Other optional S3 execution specific Parameters is specified through Jenkins native _String Parameter_ component.  
 
 S3 specific parameters are prefixed with *s3_* such as:  
 * **s3_auth_token**: s3 automation token (mandatory parameter)
@@ -96,7 +96,7 @@ To execute the job, click "Build Now" on the project page:
 ![](assets/images/run.png)
 
 ### View Results on Jenkins
-As the build is completed go to "Build Result Summary" page, click on Jenkins project *build number* to be redircted to  "build result summary" page.  
+As the build is completed go to "Build Result Summary" page, click on Jenkins project *build number* to be redirected to  "build result summary" page.  
 
 Example of "Build Result Summary" output: 
 
@@ -118,7 +118,7 @@ Click "Cisco TRADe Logs" will go directly to Cisco TRADe the result is uploaded 
 
 ## Report Plugin XML Specification
 
-The XML specification to remotely configure the pyATS Report Plugin (throught REST API):
+The XML specification to remotely configure the pyATS Report Plugin (through REST API):
 
 ```
 <publishers>
@@ -156,7 +156,7 @@ To upload to S3, authentication token is required:
 
 Details can also be found on the (**?**) help for each configurable item on the Jenkins post-build actions UI.
 
-## FreeStyple Project for ATS TCL Script 
+## Free Style Project for ATS TCL Script 
 
 ### step 1:
 
