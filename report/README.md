@@ -1,6 +1,6 @@
 # pyATS Report Plugin User Guide
 
-The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) portal. The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts). 
+The pyATS Report Plugin is a Post Build plugin to display Cisco test automation test results within Jenkins, with options to upload the result to Cisco TRADE and/or to Cisco Self Serve Services(S3) portal. The Report Plugin is designed to work with pyATS Project(for pyATS based scripts), as well as Jenkin Free Style project(for TCL based scripts).
 
 ## Objectives
 
@@ -70,7 +70,7 @@ To upload the archive to Cisco's TRADe dashboard, check the option box.
 
 __Cisco Self Serve Services (S3):__
 
-To upload the archive to the S3 dashboard specify:
+To upload the archive to the S3 portal specify:
 * The S3 instance URL:
   * http://hostname
   * http://hostname:port
@@ -80,7 +80,7 @@ To upload the archive to the S3 dashboard specify:
 
 ### S3 Parameter Configuration
 
-Uploading results to S3 requires REST API authentication. This is a mandatory parameter to be granted the uploading permission for Jenkins. The Authentication Token Parameters is specified through Jenkins native _Password Parameter_ component. Other optional S3 execution specific Parameters is specified through Jenkins native _String Parameter_ component.  
+Uploading results to S3 requires REST API authentication. This is a mandatory parameter to be granted the uploading permission for Jenkins. The Authentication Token Parameters is specified through Jenkins native _Password Parameter_ component. Other optional S3 execution specific Parameters is specified through Jenkins native _String Parameter_ component.
 
 S3 specific parameters are prefixed with *s3_* such as:  
 * **s3_auth_token**: s3 automation token (mandatory parameter)
@@ -134,7 +134,7 @@ The XML specification to remotely configure the pyATS Report Plugin (through RES
 
 XML Tag Details:
 * zipFile: [Free Style Project] A Cisco test archive file that the user wishes to use for uploading.  
-* uploadS3: Option to upload the Cisco test results to the Cisco Self Serve Services (S3) dashboard.
+* uploadS3: Option to upload the Cisco test results to the Cisco Self Serve Services (S3) portal.
 * s3Server: S3 instance URL is required.  
 * s3RequestId: The S3 request ID.
 * uploadTrade: Option to upload the Cisco test results to Cisco Trade. 
