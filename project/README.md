@@ -6,10 +6,9 @@ The pyATS project plugin enables easy execution of pyATS easypy jobs.
 
 The objective of this doc is to show how to:
 
-* Install the project plugin on Jenkins
-* Configure plugin
-* Execute the plugin
-* View the execution results
+* Install the Project plugin on Jenkins
+* Configure the pyATS Project plugin
+* Execute and View the test result
 * Work with other related Jenkins Plugins
 * Create and execute pyATS job via REST services
 
@@ -27,12 +26,12 @@ The objective of this doc is to show how to:
 * Testbed cleaning and loading
   * via clean file / testbed file (file path)
   * via file parameterized plugin
-* pyATS configuration support
+* A pyATS Project configuration support
   * automaticaly generate system configuration
   * accept user defined configuration via Jenkins file parameterized component and merge with system configuration
-* Result emailing/notifying
-* pyATS job auto provisioning (via yaml file)
-* Work with pyATS report plugin for log viewing and uploading to Cisco Self Serve Services (S3) dashboard and Cisco ATS TRADe dashboard.
+* Email generation upon run completion with result of the run
+* pyATS Project auto provisioning (via yaml file)
+* Interface with pyATS Report plugin for log viewing and uploading to Cisco Self Serve Services (S3) portal and Cisco ATS TRADe.
 
 ## Plugin Installation
 
@@ -45,7 +44,7 @@ Log in Jenkins. Click "Manage Jenkins" and then choose the "Manage Plugins" in t
 ![](assets/images/install1.png)
 
 ### Step 3:
-Go to "Advanced" tab. In the "Upload Plugin" section, choose to upload the _.hpi_ file that is previously downloaded from the local disk. Following the steps and Jenkins will automatically install/upgrade the plugin, restart the Jenkins after the installation finishes.
+From the "Manage Plugins" select the "Advanced" tab. In "Upload Plugin" section choose the .hpi file downloaded in step #1, and click on "upload". Follow through the steps prompted by jenkins to complete the installation. Jenkins will automatically install/upgrade the plugin, restart the Jenkins after the installation finishes.
 
 ![](assets/images/install2.png)
 
@@ -61,7 +60,7 @@ From the Jenkins home page, click "New Item" to bring the the Jenkins project cr
 
 #### Step 2:
 
-Fill out the project name then pick the project type **pyATS Project**
+Provide the project name then pick the project type **pyATS Project**
 
 ![](assets/images/config2.png)
 
@@ -72,28 +71,28 @@ Click "OK" to be redirected to the project configuration page.
 ![](assets/images/config3.png)
 
 #### Step 4:
-Configure the project mandatory parameter - pyATS instance (pyATS tree location). 
+Configure the project mandatory parameter - pyATS instance (pyATS Virtual Env.). 
 
 ![](assets/images/config4.png)
 
-pyATS instance needs to be accessible from the Jenkins build node (master or slave). A red error message shows when required information is not provided, or if the path provided is not valid. A pyATS instance path is considered to be valid if the pyATS virtual environment source file (activate/activate.csh) is present under the path specified (e.g.: path/bin/activate). Details on other configurable fields can be found in the __plugin components__ section below.
+pyATS instance needs to be accessible from the Jenkins build node (master or slave). When required information is not provided, or if the path provided is not valid, and error message will be displayed. A pyATS instance path is considered to be valid if the pyATS virtual environment source file (activate/activate.csh) is present under the path specified (e.g.: path/bin/activate). Details on other configurable fields can be found in the __plugin components__ section below.
 
 ### Build Configuration
 
 #### Step 1:
-Add pyATS job as a build step, by selecting **Execute pyATS Job** from the list of all the build plugins installed on the Jenkins instance.  
+Add pyATS job as a build step, by selecting **Execute pyATS Job** from the list.
 ![](assets/images/config5.png)
 
 #### Step 2:
 
-Configure the build mandatory parameter - pyATS job file. The form validation will try to validate if the job path is accessible from the current Jenkins running node (Master). A warning message displays when the validation fails. User can ignore the warning in the following situations:
+Specify the pyATS job file. The form validation will check if the job path is accessible from the current Jenkins running node (Master). A warning message is displayed if validation fails. The warning can be ignored in the following situations:
 * The actual build happens on the remote/slave node which can access the job.
 * pyATS job is in a _Docker_ environment.
 * Jenkins parameter/variable is used here to present the job path.
 
 ![](assets/images/config6.png)
 
-Click the **Save** button to complete the simplest pyATS job creation.
+Click the **Save** button to save the configuration.
 
 
 ## Execution and Output
@@ -108,7 +107,7 @@ Runtime log can be viewed via native Jenkins "Console Output", or third party lo
 
 ## Plugin Components
 
-Other than the mandatory configurations described above, the plugin provide all other optional configurations via the following components to shape the job executions:
+Other than the mandatory configurations described above, the plugin provide other optional configurations:
 
 * pyATS Automated Provisioning
 * pyATS Docker Configuration
