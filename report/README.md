@@ -49,7 +49,7 @@ Navigate to project configuration, click on "Add post-build action" and select "
 ![](assets/images/config1.png)
 
 #### Step 2:
-Based on the the project type (pyATS Project or FreeStyple Project,  the Report plugin interface will have minor differences based on where the _testresults archive_(ResultsDetails.xml) is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
+Based on the the project type (pyATS Project or FreeStyple Project) the Report plugin interface will have minor differences depending on where the _testresults archive_ is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
 
 _Free Style project_:
 
@@ -71,7 +71,7 @@ To upload the archive to Cisco's TRADe dashboard, check the option box.
 __Cisco Self Serve Services (S3):__
 
 To upload the archive to the S3 dashboard specify:
-* The S3  instance URL:
+* The S3 instance URL:
   * http://hostname
   * http://hostname:port
 * The S3 top level *Request ID*  
@@ -80,10 +80,10 @@ To upload the archive to the S3 dashboard specify:
 
 ### S3 Parameter Configuration
 
-Uploading resuls to S3 requires REST API authentication. This is a mandatory parameter to be granted the uploading permission for Jenkins. The Authentication Token Parameters is specified through Jenkins native _Password Parameter_ component.  Other optional S3 execution specific Parameters is specified through Jenkins native _String Parameter_ component.  
+Uploading resuls to S3 requires REST API authentication. This is a mandatory parameter to be granted the uploading permission for Jenkins. The Authentication Token Parameters is specified through Jenkins native _Password Parameter_ component. Other optional S3 execution specific Parameters is specified through Jenkins native _String Parameter_ component.  
 
-S3 specific parameters are prefixed with  *s3_*  such as:  
-* **s3_auth_token**: s3 automation token  (mandatory parameter)
+S3 specific parameters are prefixed with *s3_* such as:  
+* **s3_auth_token**: s3 automation token (mandatory parameter)
 * **s3_branch**: indicating the image branch for the execution (optional parameter)
 * **s3_component**: indicating the feature component the sanity job covers (optional parameter)
 
