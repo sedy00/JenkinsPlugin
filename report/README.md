@@ -49,7 +49,7 @@ Navigate to project configuration, click on "Add post-build action" and select "
 ![](assets/images/config1.png)
 
 #### Step 2:
-Based on the the project type (pyATS Project or FreeStyple Project) the Report plugin interface will have minor differences depending on where the _testresults archive_ is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
+Based on the the project type (pyATS Project or FreeStyple Project) the Report plugin interface will have minor differences depending on where the _test result archive (.zip)_ is saved.  The _pyATS Project_  saves the test results archive in Jenkins _workspace_ where as the _Free Styple Project plugin_ saves the Test result archive in user specified location. 
 
 _Free Style project_:
 
